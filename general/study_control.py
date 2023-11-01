@@ -109,6 +109,10 @@ class Study_control:
         
         #print(str)
         return
+    
+    def control_raise_exception(self):
+        raise ValueError
+        return
         
 
 def help():
@@ -118,6 +122,7 @@ def help():
     print('3 -- control_for')
     print('4 -- control_while_1')
     print('5 -- control_match')
+    print('6 -- control_raise_exception')
 
 def study_control_func():
     my_control = Study_control(2)
@@ -134,6 +139,8 @@ def study_control_func():
         my_control.control_while1()
     elif choice == 5:
         my_control.control_match()
+    elif choice == 6:
+        my_control.control_raise_exception()
     else:
         help()
 
