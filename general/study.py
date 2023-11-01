@@ -7,12 +7,14 @@
 from study_control import study_control_func
 from study_data import study_data_func
 from study_file import study_file_func
+from study_lib import study_lib_func
 import sys
 
 def help():
     print('0 -- control')
     print('1 -- data')
     print('2 -- file')
+    print('3 -- lib')
 
 if __name__ == '__main__':
     print('study main')
@@ -27,6 +29,8 @@ if __name__ == '__main__':
         study_data_func()
     elif choice == 2:
         study_file_func()
+    elif choice == 3:
+        study_lib_func()
     else:
         help()
 
