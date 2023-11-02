@@ -44,7 +44,15 @@ class Study_lib:
         result=re.findall(pattern,text)
         for element in result:
             print(element)
-
+        return
+    
+    def lib_logging_test(self):
+        import logging
+        logging.debug('Debugging information')
+        logging.info('Informational message')
+        logging.warning('Warning:config file %s not found', 'server.conf')
+        logging.error('Error occurred')
+        logging.critical('Critical error -- shutting down')
         return
 
 def study_lib_func():
@@ -52,5 +60,6 @@ def study_lib_func():
     mystudy.lib_os_test()
     mystudy.lib_random_test()
     mystudy.lib_net_test()
+    mystudy.lib_logging_test()
     return
 
